@@ -1,0 +1,36 @@
+[project]
+name = "arabic-sentiment-analysis"
+version = "0.1.0"
+description = "AI project for classifying sentiment of Arabic text comments."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Student Name 1", email = "student1@example.com"},
+    {name = "Student Name 2", email = "student2@example.com"},
+    {name = "Student Name 3", email = "student3@example.com"},
+]
+keywords = ["ai", "nlp", "sentiment-analysis", "arabic"]
+
+dependencies = [
+    "pandas>=2.3.0",
+    "scikit-learn>=1.7.0",
+    "matplotlib>=3.10.3",
+    "numpy>=1.26.0",
+    "jupyter>=1.0.0",
+    "seaborn>=0.13.0",
+    "joblib>=1.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
